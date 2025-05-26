@@ -1,3 +1,4 @@
+/* //NOTE: Basket price and Deliverycosts*/
 .dish-total{
   display: flex;
   flex-direction: column;
@@ -21,4 +22,65 @@
   font-weight: bolder;
   display: flex;
   justify-content: space-between;
+}
+
+/* NOTE: Basket*/
+.basket_wrapper{
+    height: auto;
+    width: 308px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0px 10px 0 rgb(0, 0, 0, 25%);
+}
+.basket{
+    /* height: 100vh; */
+    width: 308px;
+    height: auto;
+    position: sticky;
+    top: 0;
+    /* background-color: rgb(23, 240, 236); */
+    /* border: 1px solid rgb(232, 232, 232); */
+    /* box-shadow: 0 0px 10px 0 rgb(0, 0, 0, 15%); */
+}
+.basket h1{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+.basket-content{
+  margin-left: 15px;
+}
+.basket-amount{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  margin-bottom: 15px;
+
+  /* border: 1px solid black; */
+}
+
+.basket-substract{
+  align-items: center;
+  padding: 5px;
+
+  color: rgb(240, 136, 50);
+  font-weight: bolder;
+}
+
+.basket-add{
+  padding: 5px;
+  align-items: center;
+
+  color: rgb(240, 136, 50);
+  font-weight: bolder;
+}
+.basket-price{
+  padding: 5px;
+  align-items: center;
 }
