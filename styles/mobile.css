@@ -1,0 +1,47 @@
+@media (max-width: 699px) {
+  .main {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .content {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .basket_wrapper {
+    width: 100% !important;
+    height: auto !important;
+    position: static !important;
+    box-shadow: none !important;
+  }
+  .basket {
+    width: 100% !important;
+    height: auto !important;
+    position: static !important;
+    box-shadow: none !important;
+  }
+  .dish-content-wrapper {
+    display: block !important;
+  }
+  .dish-contents {
+    display: block !important;
+  }
+  .dish-card {
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+  }
+  #basket-content {
+    display: none;
+  }
+  .basket.open #basket-content {
+    display: block;
+  }
+  #basket-toggle {
+    background-color: #21b7ed;
+    color: white;
+    cursor: pointer;
+    padding: 1em;
+    font-size: 1.2em;
+    border-bottom: 1px solid #ccc;
+  }
+}
