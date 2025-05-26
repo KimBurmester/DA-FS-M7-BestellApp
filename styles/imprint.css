@@ -1,18 +1,49 @@
-.imprint-main{
-
+.impressum {
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-radius: 25px;
+    background-color: rgb(240, 240, 240);
+    margin-top: 32px;
 }
-.impressum{
 
+#generator_results {
+    padding-left: 96px;
+    padding-right: 96px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin: 32px 0px;
+    border-radius: 25px;
+    background-color: rgb(240, 240, 240);
 }
-#generator_results{
 
+
+@media(max-width: 1500px) {
+    .body-styleContainer {
+        padding: 0 30px;
+    }
 }
-#generator_results_content{
 
+@media (max-width:768px) {
+
+    .impressum-styleContainer1,
+    .impressum-styleContainer2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
-.generator_user_input{
 
-}
-.generator_user_input{
+@media (max-width:450px) {
 
+    .impressum {
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+
+    #generator_results {
+    padding-left: 30px;
+    padding-right: 30px;
+    }
 }
