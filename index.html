@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link rel="stylesheet" href="./style.css">
   <title>Food & Panda</title>
 </head>
-<body>
+<body onload="dishesInit()">
       <header class="header">
         <div class="bestell-logo"></div>
         <div class="burger" onclick="toggleMenu()">
@@ -33,47 +33,15 @@
         <!-- Artikelliste-->
         <div class="dish-content-wrapper">
           <div class="dish-contents">
-            <div class="dish-card" id="dish-card">
+<!--             <div class="dish-card" id="dish-card">
               <div class="dish-header">
                 <div class="dish-title" id="dish-title">Pizza</div>
                 <div class="dish-adding">+</div>
               </div>
               <div class="dish-description" id="dish-description">Leckere Salami Pizza</div>
               <div class="dish-price" id="dish-price">16,90€</div>
-            </div>
-              <div class="dish-card" id="dish-card">
-              <div class="dish-header">
-                <div class="dish-title" id="dish-title">Pizza</div>
-                <div class="dish-adding">+</div>
-              </div>
-              <div class="dish-description" id="dish-description">Leckere Salami Pizza</div>
-              <div class="dish-price" id="dish-price">16,90€</div>
-            </div>
-              <div class="dish-card" id="dish-card">
-              <div class="dish-header">
-                <div class="dish-title" id="dish-title">Pizza</div>
-                <div class="dish-adding">+</div>
-              </div>
-              <div class="dish-description" id="dish-description">Leckere Salami Pizza</div>
-              <div class="dish-price" id="dish-price">16,90€</div>
-            </div>
-              <div class="dish-card" id="dish-card">
-              <div class="dish-header">
-                <div class="dish-title" id="dish-title">Pizza</div>
-                <div class="dish-adding">+</div>
-              </div>
-              <div class="dish-description" id="dish-description">Leckere Salami Pizza</div>
-              <div class="dish-price" id="dish-price">16,90€</div>
-            </div>
-              <div class="dish-card" id="dish-card">
-              <div class="dish-header">
-                <div class="dish-title" id="dish-title">Pizza</div>
-                <div class="dish-adding">+</div>
-              </div>
-              <div class="dish-description" id="dish-description">Leckere Salami Pizza</div>
-              <div class="dish-price" id="dish-price">16,90€</div>
-            </div>
-            <!-- <div class="dish-container"></div> -->
+            </div> -->
+            <div id="menu"></div>
           </div>
         </div>
       </div>
@@ -113,9 +81,9 @@
       <span>Food & Panda</span>
     </footer>
 </body>
+  <script src="/script.js" type="module"></script>
 <script src="./script/basket.js"></script>
 <script src="./script/delivery.js"></script>
 <script src="./script/hamburger-menu.js"></script>
 <script src="./script/templates.js"></script>
-<script src="./script.js" type="module"></script>
 </html>
