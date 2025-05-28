@@ -10,11 +10,15 @@
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .dish-deliverycosts{
   margin-bottom: 10px;
-    display: flex;
+  display: flex;
   justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .dish-totalprice{
   margin-bottom: 10px;
@@ -22,6 +26,8 @@
   font-weight: bolder;
   display: flex;
   justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 /*//NOTE: Delivery Costs Toggle Button */
     .switch {
