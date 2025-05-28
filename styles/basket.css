@@ -1,9 +1,11 @@
 /* //NOTE: Basket price and Deliverycosts*/
 .dish-total{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin-left: 15px;
   margin-right: 15px;
+  margin-bottom: 20px;
   color: rgb(122, 122, 122);
 }
 .dish-subtotal{
