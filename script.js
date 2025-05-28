@@ -26,10 +26,6 @@ let dishes = [
   }
 ];
 
-function dishesInit() {
-    renderDishes();
-}
 
-function renderDishes() {
 
-}
+
