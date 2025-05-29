@@ -176,21 +176,22 @@ function renderDessertDishesTemplate(i) {
             </div>`;
 }
 
-/* function addToBasket(i, startKey, destinationKey) {
-  let dish = dishes[startKey].splice(i, 1);
+
+function addStarterToBasket(i, startKey, destinationKey) {
+  let dish = allDishes.starter[startKey].splice(i, 1);
   basket[destinationKey].push(dish[0]);
-
-
-  renderBasket();
+  
+  renderStarterBasket();
 }
 
-function renderBasket() {
-  let archivBasket = document.getElementById('dish-title');
-  archivBasket.innerHTML = "";
-
-  for (let i = 0; i < .length; i++) {
-    
-    
+function renderStarterBasket() {
+  let starterBasketRef = document.getElementById('');
+  starterBasketRef.innerHTML = "";
+  for (let i = 0; i < allDishes.starter.length; i++) {
+    starterBasketRef.innerHTML += renderStarterBasketTemplate(i); 
   }
-} */
+}
 
+function renderStarterBasketTemplate() {
+  
+}
