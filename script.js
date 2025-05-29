@@ -108,9 +108,7 @@ let allDishes = {
   ]
 }
 
-
 let basket = [];
-
 
 function dishesInit() {
     renderStarterDishes();
@@ -119,7 +117,6 @@ function dishesInit() {
 };
 
 /*//NOTE: Starter Dish Logik */
-
 function renderStarterDishes() {
   let contentRef = document.getElementById('starterMenu');
   contentRef.innerHTML = "";
@@ -140,43 +137,42 @@ function renderStarterDishesTemplate(i) {
 }
 
 /*//NOTE: Main Dish Logik */
-
-
 function renderMainDishes() {
-    let contentRef = document.getElementById('mainMenu');
-    for (let i = 0; i < dishes.length; i++) {
-        contentRef.innerHTML += renderMainDishesTemplate(i);
-    }
+  let contentRef = document.getElementById('mainMenu');
+  contentRef.innerHTML = "";
+  for (let i = 0; i < allDishes.dishes.length; i++) {
+    contentRef.innerHTML += renderMainDishesTemplate(i);
+  }
 }
-
-function renderDessertDishes() {
-    let contentRef = document.getElementById('dessertMenu');
-    for (let i = 0; i < desserts.length; i++) {
-      contentRef.innerHTML += renderDessertDishesTemplate(i);
-    }
-}
-
-
 
 function renderMainDishesTemplate(i) {
     return `<div class="dish-card" id="dish-card" onclick="addToBasket(${i}, 'dishes', '${basket}')">
               <div class="dish-header">
-                <div class="dish-title" id="dish-title">${dishes[i].name}</div>
+                <div class="dish-title" id="dish-title">${allDishes.dishes[i].name}</div>
                 <div class="dish-adding">+</div>
               </div>
-              <div class="dish-description" id="dish-description">${dishes[i].description}</div>
-              <div class="dish-price" id="dish-price">${dishes[i].price.toFixed(2)}€</div>
+              <div class="dish-description" id="dish-description">${allDishes.dishes[i].description}</div>
+              <div class="dish-price" id="dish-price">${allDishes.dishes[i].price.toFixed(2)}€</div>
             </div>`;
+}
+
+
+/*//NOTE: Dessert Dish Logik */
+function renderDessertDishes() {
+    let contentRef = document.getElementById('dessertMenu');
+    for (let i = 0; i < allDishes.dessert.length; i++) {
+      contentRef.innerHTML += renderDessertDishesTemplate(i);
+    }
 }
 
 function renderDessertDishesTemplate(i) {
     return `<div class="dish-card" id="dish-card" onclick="addToBasket(${i}, 'dessert', '${basket}')">
               <div class="dish-header">
-                <div class="dish-title" id="dish-title">${desserts[i].name}</div>
+                <div class="dish-title" id="dish-title">${allDishes.dessert[i].name}</div>
                 <div class="dish-adding">+</div>
               </div>
-              <div class="dish-description" id="dish-description">${desserts[i].description}</div>
-              <div class="dish-price" id="dish-price">${desserts[i].price.toFixed(2)}€</div>
+              <div class="dish-description" id="dish-description">${allDishes.dessert[i].description}</div>
+              <div class="dish-price" id="dish-price">${allDishes.dessert[i].price.toFixed(2)}€</div>
             </div>`;
 }
 
