@@ -177,31 +177,63 @@ function renderDessertDishesTemplate(i) {
 }
 
 
-function addStarterToBasket(i, startKey, destinationKey) {
-  let dish = allDishes.starter[startKey].splice(i, 1);
-  basket[destinationKey].push(dish[0]);
-  
-  renderStarterBasket();
+function renderStarterDishes() {
+  const contentRef = document.getElementById('starterMenu');
+  contentRef.innerHTML = allDishes.starter
+    .map((dish, i) => `
+      <div class="dish-card"
+           onclick="addStarterToBasket(${i})">
+        <div class="dish-header">
+          <div class="dish-title">${dish.name}</div>
+          <div class="dish-adding">+</div>
+        </div>
+        <div class="dish-description">${dish.description}</div>
+        <div class="dish-price">${dish.price.toFixed(2)}€</div>
+      </div>
+    `).join('');
 }
 
-function renderStarterBasket() {
-  let starterBasketRef = document.getElementById('dish-basket');
-  starterBasketRef.innerHTML = "";
-  for (let i = 0; i < allDishes.starter.length; i++) {
-    starterBasketRef.innerHTML += renderStarterBasketTemplate(i); 
+function addStarterToBasket(i) {
+  // hole dir das Gericht
+  const dish = allDishes.starter[i];
+  // pushe eine Kopie ins Basket-Array
+  basket.push({
+    name: dish.name,
+    price: dish.price,
+    amount: 1
+  });
+  renderBasket();
+}
+
+function renderBasket() {
+  const basketRef = document.getElementById('dish-basket');
+  if (!basket.length) {
+    basketRef.innerHTML = '<p>Dein Warenkorb ist leer</p>';
+    return;
   }
+  basketRef.innerHTML = basket.map((d, i) => `
+    <div class="dish-card">
+      <div class="dish-header">
+        <div class="dish-title">${d.name}</div>
+      </div>
+      <div class="basket-amount">
+        <div class="basket-substract" onclick="changeAmount(${i}, -1)">-</div>
+        ${d.amount}
+        <div class="basket-add" onclick="changeAmount(${i}, 1)">+</div>
+        <div class="basket-price">${(d.price * d.amount).toFixed(2)}€</div>
+        <div class="basket-trash" onclick="removeFromBasket(${i})">🗑</div>
+      </div>
+    </div>
+  `).join('');
 }
 
-function renderStarterBasketTemplate() {
-  return `<div class="dish-card" id="dish-card">
-              <div class="dish-header">
-                <div class="dish-title" id="dish-title">${allDishes.starter[i].name}</div>
-              </div>
-              <div class="basket-amount">
-                <div class="basket-substract">-</div>
-                <div class="basket-add">+</div>
-                <div class="basket-price">${allDishes.starter[i].price.toFixed(2)}</div>
-                <div class="basket-trash">🗑</div>
-              </div>
-            </div>`;
+function changeAmount(i, delta) {
+  basket[i].amount += delta;
+  if (basket[i].amount <= 0) basket.splice(i, 1);
+  renderBasket();
+}
+
+function removeFromBasket(i) {
+  basket.splice(i, 1);
+  renderBasket();
 }
