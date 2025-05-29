@@ -171,20 +171,5 @@ function renderDessertDishesTemplate(i) {
             </div>`;
 }
 
-function renderBasketTemplate(i) {
-  const dish = basket[i];
-  return `
-    <div class="dish-card">
-      <div class="dish-header">
-        <div class="dish-title">${dish.name}</div>
-      </div>
-      <div class="basket-amount">
-        <div class="basket-substract" onclick="changeAmount(${i}, -1)">-</div>
-        ${dish.amount}
-        <div class="basket-add" onclick="changeAmount(${i}, 1)">+</div>
-        <div class="basket-price">€ ${(dish.price * dish.amount).toFixed(2)}</div>
-        <div class="basket-trash" onclick="removeFromBasket(${i})">🗑</div>
-      </div>
-    </div>`;
-}
+
 
