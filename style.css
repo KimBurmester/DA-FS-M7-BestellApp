@@ -9,7 +9,7 @@
 @import url(./styles/imprint.css);
 @import url(./styles/logo.css);
 @import url(./styles/dish-breaks.css);
-
+@import url(./styles/dish-categorie.css);
 
 * {
     margin: 0;
