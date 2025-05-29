@@ -126,7 +126,7 @@ function renderStarterDishes() {
 }
 
 function renderStarterDishesTemplate(i) {
-    return `<div class="dish-card" id="dish-card" onclick="addToBasket(${i}, 'starter', '${basket}')">
+    return `<div class="dish-card" id="dish-card" onclick="addStarterToBasket(${i}, 'starter', '${basket}')">
               <div class="dish-header">
                 <div class="dish-title" id="dish-title">${allDishes.starter[i].name}</div>
                 <div class="dish-adding">+</div>
