@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="./style.css">
-  
-  <title>Food & Panda</title>
-</head>
-<body onload="dishesInit()">
-      <header class="header">
-        <div class="bestell-logo"></div>
-        <div class="burger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <nav class="menu" id="menu">
-          <a href="./index.html">Start</a>
-          <a href="/index.html">Warenkorb</a>
-          <a href="./site/imprint.html">Kontakt</a>
-          <a href="./site/newDishes.html">Gerichte hinzufügen</a>
-          <a href="./site/imprint.html">Impressum</a>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Food & Panda</title>
+  </head>
+  <body onload="dishesInit()">
+    <header class="header">
+      <div class="bestell-logo"></div>
+      <div class="burger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="menu" id="menu">
+        <a href="./index.html">Start</a>
+        <a href="/index.html">Warenkorb</a>
+        <a href="./site/imprint.html">Kontakt</a>
+        <a href="./site/newDishes.html">Gerichte hinzufügen</a>
+        <a href="./site/imprint.html">Impressum</a>
+      </nav>
     </header>
 
     <section class="main">
@@ -45,28 +45,41 @@
           <h1 id="basket-toggle">Warenkorb</h1>
           <div id="basket-content">
             <!-- <p>Deine Warenkorb ist leer</p> -->
-              <div class="dish-card" id="dish-card">
+            <div class="dish-card" id="dish-card">
               <div class="dish-header">
                 <div class="dish-title" id="dish-title">Pizza</div>
               </div>
               <div class="basket-amount">
-                <div class="basket-substract">-</div>2
+                <div class="basket-substract">-</div>
+                2
                 <div class="basket-add">+</div>
                 <div class="basket-price">16,90€</div>
-                <div class="basket-trash">🗑</div></div>
+                <div class="basket-trash">🗑</div>
               </div>
+            </div>
 
             <div class="deliveryCostBtn">
-            <div class="dish-total" id="dish-total">
-              <label class="switch">
-                <input type="checkbox" id="deliveryToggle">
-                <span class="slider"></span>
-              </label><span class="toggle-label" id="toggleText">Lieferkosten aus</span>
+              <div class="dish-total" id="dish-total">
+                <label class="switch">
+                  <input type="checkbox" id="deliveryToggle" />
+                  <span class="slider"></span> </label
+                ><span class="toggle-label" id="toggleText"
+                  >Lieferkosten aus</span
+                >
+              </div>
+              <div class="dish-subtotal">
+                <div>Zwischensumme</div>
+                <div>33,80€</div>
+              </div>
+              <div class="dish-deliverycosts">
+                <div>Lieferkosten</div>
+                <div>5,00€</div>
+              </div>
+              <div class="dish-totalprice">
+                <div>Gesamtpreis</div>
+                <div>38,80€</div>
+              </div>
             </div>
-            <div class="dish-subtotal"><div>Zwischensumme</div><div>33,80€</div></div>
-            <div class="dish-deliverycosts"><div>Lieferkosten</div><div>5,00€</div></div>
-            <div class="dish-totalprice"><div>Gesamtpreis</div><div>38,80€</div></div>
-          </div>
           </div>
         </div>
       </div>
@@ -75,10 +88,10 @@
     <footer class="footer">
       <span>Food & Panda</span>
     </footer>
-</body>
-<script src="/script.js"></script>
-<script src="./script/basket.js"></script>
-<script src="./script/delivery.js"></script>
-<script src="./script/hamburger-menu.js"></script>
-<script src="./script/templates.js"></script>
+  </body>
+  <script src="/script.js"></script>
+  <script src="./script/basket.js"></script>
+  <script src="./script/delivery.js"></script>
+  <script src="./script/hamburger-menu.js"></script>
+  <script src="./script/templates.js"></script>
 </html>

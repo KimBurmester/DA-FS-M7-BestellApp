@@ -1,3 +1,4 @@
+/*//NOTE: Dishes Render Script */
 let starters = [
   {
     name: "Bruschetta",
@@ -170,17 +171,20 @@ function renderDessertDishesTemplate(i) {
             </div>`;
 }
 
-
-
-function renderBasketTemplate(dishIndex) {
-  return ` <div class="dish-card" id="dish-card">
-              <div class="dish-header">
-                <div class="dish-title" id="dish-title">Pizza</div>
-              </div>
-              <div class="basket-amount">
-                <div class="basket-substract">-</div>2
-                <div class="basket-add">+</div>
-                <div class="basket-price">16,90€</div>
-                <div class="basket-trash">🗑</div></div>
-              </div>`;
+function renderBasketTemplate(i) {
+  const dish = basket[i];
+  return `
+    <div class="dish-card">
+      <div class="dish-header">
+        <div class="dish-title">${dish.name}</div>
+      </div>
+      <div class="basket-amount">
+        <div class="basket-substract" onclick="changeAmount(${i}, -1)">-</div>
+        ${dish.amount}
+        <div class="basket-add" onclick="changeAmount(${i}, 1)">+</div>
+        <div class="basket-price">€ ${(dish.price * dish.amount).toFixed(2)}</div>
+        <div class="basket-trash" onclick="removeFromBasket(${i})">🗑</div>
+      </div>
+    </div>`;
 }
+

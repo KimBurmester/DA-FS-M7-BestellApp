@@ -6,3 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     basket.classList.toggle("open");
   });
 });
+
+
+/*//NOTE: Move To Basket Logic */
+
