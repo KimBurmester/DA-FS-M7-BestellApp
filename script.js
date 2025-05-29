@@ -194,9 +194,7 @@ function renderStarterDishes() {
 }
 
 function addStarterToBasket(i) {
-  // hole dir das Gericht
   const dish = allDishes.starter[i];
-  // pushe eine Kopie ins Basket-Array
   basket.push({
     name: dish.name,
     price: dish.price,
