@@ -1,0 +1,10 @@
+.dish-basket p{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 0, 0,0.1);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: rgb(240, 136, 50);
+}
