@@ -107,6 +107,9 @@ let desserts = [
   }
 ];
 
+let basket = [];
+
+
 function dishesInit() {
     renderStarterDishes();
     renderMainDishes();
@@ -167,3 +170,17 @@ function renderDessertDishesTemplate(i) {
             </div>`;
 }
 
+
+
+function renderBasketTemplate(dishIndex) {
+  return ` <div class="dish-card" id="dish-card">
+              <div class="dish-header">
+                <div class="dish-title" id="dish-title">Pizza</div>
+              </div>
+              <div class="basket-amount">
+                <div class="basket-substract">-</div>2
+                <div class="basket-add">+</div>
+                <div class="basket-price">16,90€</div>
+                <div class="basket-trash">🗑</div></div>
+              </div>`;
+}
