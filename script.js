@@ -1,5 +1,6 @@
 /*//NOTE: Dishes Render Script */
-let starters = [
+let allDishes = {
+  'starter': [
   {
     name: "Bruschetta",
     description: "Geröstetes Brot mit Tomatenwürfeln, Knoblauch, Basilikum und Olivenöl",
@@ -25,9 +26,8 @@ let starters = [
     description: "Mit Frischkäse gefüllte Zucchinistreifen, auf Rucola serviert",
     price: 5.80
   }
-];
-
-let dishes = [
+  ],
+  'dishes' : [
   {
     name: "Spaghetti Bolognese",
     description: "Hausgemachte Spaghetti mit traditioneller Rindfleisch-Bolognese",
@@ -78,9 +78,8 @@ let dishes = [
     description: "Kalbsschnitzel mit Pommes frites und Zitrone",
     price: 15.90
   }
-];
-
-let desserts = [
+  ],
+  'dessert' : [
   {
     name: "Tiramisu",
     description: "Klassisches italienisches Dessert mit Mascarpone und Kaffee",
@@ -106,7 +105,9 @@ let desserts = [
     description: "Frische Früchte der Saison, leicht gesüßt",
     price: 4.80
   }
-];
+  ]
+}
+
 
 let basket = [];
 
@@ -117,12 +118,29 @@ function dishesInit() {
     renderDessertDishes();
 };
 
+/*//NOTE: Starter Dish Logik */
+
 function renderStarterDishes() {
   let contentRef = document.getElementById('starterMenu');
-  for (let i = 0; i < starters.length; i++) {
+  contentRef.innerHTML = "";
+  for (let i = 0; i < allDishes.starter.length; i++) {
     contentRef.innerHTML += renderStarterDishesTemplate(i);
   }
 }
+
+function renderStarterDishesTemplate(i) {
+    return `<div class="dish-card" id="dish-card" onclick="addToBasket(${i}, 'starter', '${basket}')">
+              <div class="dish-header">
+                <div class="dish-title" id="dish-title">${allDishes.starter[i].name}</div>
+                <div class="dish-adding">+</div>
+              </div>
+              <div class="dish-description" id="dish-description">${allDishes.starter[i].description}</div>
+              <div class="dish-price" id="dish-price">${allDishes.starter[i].price.toFixed(2)}€</div>
+            </div>`;
+}
+
+/*//NOTE: Main Dish Logik */
+
 
 function renderMainDishes() {
     let contentRef = document.getElementById('mainMenu');
@@ -138,19 +156,10 @@ function renderDessertDishes() {
     }
 }
 
-function renderStarterDishesTemplate(i) {
-    return `<div class="dish-card" id="dish-card" onclick="addToBasket()">
-              <div class="dish-header">
-                <div class="dish-title" id="dish-title">${starters[i].name}</div>
-                <div class="dish-adding">+</div>
-              </div>
-              <div class="dish-description" id="dish-description">${starters[i].description}</div>
-              <div class="dish-price" id="dish-price">${starters[i].price.toFixed(2)}€</div>
-            </div>`;
-}
+
 
 function renderMainDishesTemplate(i) {
-    return `<div class="dish-card" id="dish-card" onclick="addToBasket()">
+    return `<div class="dish-card" id="dish-card" onclick="addToBasket(${i}, 'dishes', '${basket}')">
               <div class="dish-header">
                 <div class="dish-title" id="dish-title">${dishes[i].name}</div>
                 <div class="dish-adding">+</div>
@@ -161,7 +170,7 @@ function renderMainDishesTemplate(i) {
 }
 
 function renderDessertDishesTemplate(i) {
-    return `<div class="dish-card" id="dish-card" onclick="addToBasket()">
+    return `<div class="dish-card" id="dish-card" onclick="addToBasket(${i}, 'dessert', '${basket}')">
               <div class="dish-header">
                 <div class="dish-title" id="dish-title">${desserts[i].name}</div>
                 <div class="dish-adding">+</div>
@@ -171,5 +180,21 @@ function renderDessertDishesTemplate(i) {
             </div>`;
 }
 
+/* function addToBasket(i, startKey, destinationKey) {
+  let dish = dishes[startKey].splice(i, 1);
+  basket[destinationKey].push(dish[0]);
 
+
+  renderBasket();
+}
+
+function renderBasket() {
+  let archivBasket = document.getElementById('dish-title');
+  archivBasket.innerHTML = "";
+
+  for (let i = 0; i < .length; i++) {
+    
+    
+  }
+} */
 
