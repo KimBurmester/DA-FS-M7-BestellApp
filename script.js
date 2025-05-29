@@ -109,17 +109,37 @@ let desserts = [
 
 
 function dishesInit() {
-    renderDishes();
+    renderStarterDishes();
+    renderMainDishes();
+    renderDessertDishes();
 };
 
-function renderDishes() {
-    let contentRef = document.getElementById('dishMenu');
+function renderStarterDishes() {
+  let contentRef = document.getElementById('starterMenu');
+  for (let i = 0; i < starters.length; i++) {
+    contentRef.innerHTML += renderStarterDishesTemplate(i);
+  }
+}
+
+function renderMainDishes() {
+    let contentRef = document.getElementById('mainMenu');
     for (let i = 0; i < dishes.length; i++) {
-        contentRef.innerHTML += renderTemplate(i);
+        contentRef.innerHTML += renderMainDishesTemplate(i);
     }
 }
 
-function renderTemplate(i) {
+function renderStarterDishesTemplate(i) {
+    return `<div class="dish-card" id="dish-card">
+              <div class="dish-header">
+                <div class="dish-title" id="dish-title">${starters[i].name}</div>
+                <div class="dish-adding">+</div>
+              </div>
+              <div class="dish-description" id="dish-description">${starters[i].description}</div>
+              <div class="dish-price" id="dish-price">${starters[i].price.toFixed(2)}€</div>
+            </div>`;
+}
+
+function renderMainDishesTemplate(i) {
     return `<div class="dish-card" id="dish-card">
               <div class="dish-header">
                 <div class="dish-title" id="dish-title">${dishes[i].name}</div>
