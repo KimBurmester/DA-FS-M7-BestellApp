@@ -139,7 +139,7 @@ function renderDessertDishes() {
 }
 
 function renderStarterDishesTemplate(i) {
-    return `<div class="dish-card" id="dish-card">
+    return `<div class="dish-card" id="dish-card" onclick="addToBasket()">
               <div class="dish-header">
                 <div class="dish-title" id="dish-title">${starters[i].name}</div>
                 <div class="dish-adding">+</div>
@@ -150,7 +150,7 @@ function renderStarterDishesTemplate(i) {
 }
 
 function renderMainDishesTemplate(i) {
-    return `<div class="dish-card" id="dish-card">
+    return `<div class="dish-card" id="dish-card" onclick="addToBasket()">
               <div class="dish-header">
                 <div class="dish-title" id="dish-title">${dishes[i].name}</div>
                 <div class="dish-adding">+</div>
@@ -161,7 +161,7 @@ function renderMainDishesTemplate(i) {
 }
 
 function renderDessertDishesTemplate(i) {
-    return `<div class="dish-card" id="dish-card">
+    return `<div class="dish-card" id="dish-card" onclick="addToBasket()">
               <div class="dish-header">
                 <div class="dish-title" id="dish-title">${desserts[i].name}</div>
                 <div class="dish-adding">+</div>
