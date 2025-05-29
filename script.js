@@ -185,7 +185,7 @@ function addStarterToBasket(i, startKey, destinationKey) {
 }
 
 function renderStarterBasket() {
-  let starterBasketRef = document.getElementById('');
+  let starterBasketRef = document.getElementById('dish-basket');
   starterBasketRef.innerHTML = "";
   for (let i = 0; i < allDishes.starter.length; i++) {
     starterBasketRef.innerHTML += renderStarterBasketTemplate(i); 
@@ -193,5 +193,15 @@ function renderStarterBasket() {
 }
 
 function renderStarterBasketTemplate() {
-  
+  return `<div class="dish-card" id="dish-card">
+              <div class="dish-header">
+                <div class="dish-title" id="dish-title">${allDishes.starter[i].name}</div>
+              </div>
+              <div class="basket-amount">
+                <div class="basket-substract">-</div>
+                <div class="basket-add">+</div>
+                <div class="basket-price">${allDishes.starter[i].price.toFixed(2)}</div>
+                <div class="basket-trash">🗑</div>
+              </div>
+            </div>`;
 }
