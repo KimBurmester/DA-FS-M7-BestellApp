@@ -1,4 +1,5 @@
-let starters = [
+let allDishes = {
+  'starter': [
   {
     name: "Bruschetta",
     description: "Geröstetes Brot mit Tomatenwürfeln, Knoblauch, Basilikum und Olivenöl",
@@ -24,9 +25,8 @@ let starters = [
     description: "Mit Frischkäse gefüllte Zucchinistreifen, auf Rucola serviert",
     price: 5.80
   }
-];
-
-let dishes = [
+  ],
+  'dishes' : [
   {
     name: "Spaghetti Bolognese",
     description: "Hausgemachte Spaghetti mit traditioneller Rindfleisch-Bolognese",
@@ -77,9 +77,8 @@ let dishes = [
     description: "Kalbsschnitzel mit Pommes frites und Zitrone",
     price: 15.90
   }
-];
-
-let desserts = [
+  ],
+  'dessert' : [
   {
     name: "Tiramisu",
     description: "Klassisches italienisches Dessert mit Mascarpone und Kaffee",
@@ -105,4 +104,5 @@ let desserts = [
     description: "Frische Früchte der Saison, leicht gesüßt",
     price: 4.80
   }
-];
+  ]
+}
