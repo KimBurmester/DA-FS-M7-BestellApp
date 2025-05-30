@@ -124,7 +124,6 @@ function renderStarterDishes() {
     contentRef.innerHTML += renderStarterDishesTemplate(i);
   }
 }
-
 function renderStarterDishesTemplate(i) {
     return `<div class="dish-card" id="dish-card" onclick="addStarterToBasket(${i}, 'starter', '${basket}')">
               <div class="dish-header">
@@ -144,7 +143,6 @@ function renderMainDishes() {
     contentRef.innerHTML += renderMainDishesTemplate(i);
   }
 }
-
 function renderMainDishesTemplate(i) {
     return `<div class="dish-card" id="dish-card" onclick="addToBasket(${i}, 'dishes', '${basket}')">
               <div class="dish-header">
@@ -163,7 +161,6 @@ function renderDessertDishes() {
       contentRef.innerHTML += renderDessertDishesTemplate(i);
     }
 }
-
 function renderDessertDishesTemplate(i) {
     return `<div class="dish-card" id="dish-card" onclick="addToBasket(${i}, 'dessert', '${basket}')">
               <div class="dish-header">
@@ -192,7 +189,13 @@ function renderBasket() {
     basketRef.innerHTML = '<p>Dein Warenkorb ist leer</p>';
     return;
   }
-  basketRef.innerHTML = basket.map((d, i) => `
+  basketRef.innerHTML = basket
+    .map((d, i) => BasketTemplate(d, i))
+    .join('');
+  updateTotals();
+}
+function BasketTemplate(d, i) {
+    return `
     <div class="dish-card">
       <div class="dish-header">
         <div class="dish-title">${d.name}</div>
@@ -205,8 +208,7 @@ function renderBasket() {
         <div class="basket-trash" onclick="removeFromBasket(${i})">🗑</div>
       </div>
     </div>
-  `).join('');
-  updateTotals()
+  `;
 }
 
 function changeAmount(i, amountChange) {
@@ -215,7 +217,6 @@ function changeAmount(i, amountChange) {
   renderBasket();
   updateTotals()
 }
-
 function removeFromBasket(i) {
   basket.splice(i, 1);
   renderBasket();
@@ -225,7 +226,7 @@ function removeFromBasket(i) {
 /*//NOTE: Deliverycosts calculating */
 const deliveryCosts = 5.00;
 
-function updateTotals() {
+/* function updateTotals() {
   const subtotal = basket.reduce((sum, item) => sum + item.price * item.amount, 0);
   const deliveryToggle = document.getElementById('deliveryToggle');
   const deliveryActive = deliveryToggle.checked;
@@ -239,7 +240,48 @@ function updateTotals() {
   document.getElementById('dish-totalprice').textContent    = (subtotal + deliveryCost).toFixed(2) + ' €';
 }
 
-/*NOTE: Delivery Toggle Button Event On/Off */
+document.addEventListener('DOMContentLoaded', () => {
+  const deliveryToggle = document.getElementById('deliveryToggle');
+  deliveryToggle.addEventListener('change', updateTotals);
+  updateTotals();
+}); */
+
+function calculateSubtotal() {
+  return basket.reduce((sum, item) => sum + item.price * item.amount, 0);
+}
+
+function getDeliveryCost() {
+  const deliveryToggle = document.getElementById('deliveryToggle');
+  return deliveryToggle.checked ? deliveryCosts : 0;
+}
+
+function renderToggleText() {
+  const deliveryToggle = document.getElementById('deliveryToggle');
+  const toggleText = deliveryToggle.checked ? 'Lieferkosten ein' : 'Lieferkosten aus';
+  document.getElementById('toggleText').textContent = toggleText;
+}
+
+function renderSubtotal(subtotal) {
+  document.getElementById('dish-subtotal').textContent = subtotal.toFixed(2) + ' €';
+}
+
+function renderDeliveryCosts(costs) {
+  document.getElementById('dish-deliverycosts').textContent = costs.toFixed(2) + ' €';
+}
+
+function renderTotalPrice(total) {
+  document.getElementById('dish-totalprice').textContent = total.toFixed(2) + ' €';
+}
+
+function updateTotals() {
+  const subtotal = calculateSubtotal();
+  const deliveryCost = getDeliveryCost();
+  renderToggleText();
+  renderSubtotal(subtotal);
+  renderDeliveryCosts(deliveryCost);
+  renderTotalPrice(subtotal + deliveryCost);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const deliveryToggle = document.getElementById('deliveryToggle');
   deliveryToggle.addEventListener('change', updateTotals);
