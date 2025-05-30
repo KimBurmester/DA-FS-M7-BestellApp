@@ -1,8 +1,4 @@
 @media (max-width: 699px) {
-  :root{
-    --header-height: 50px;
-  }
-
   .main {
     display: flex !important;
     flex-direction: column !important;

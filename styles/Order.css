@@ -1,8 +1,8 @@
-.ordering{
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-    color: white;
-    padding: 15px;
+  .ordering {
+    flex: 0 0 auto;
+    text-align: center;
+    margin: 0;
+    padding: 1em;
     background-color: rgb(240, 136, 50);
-}
+    color: white;
+  }
