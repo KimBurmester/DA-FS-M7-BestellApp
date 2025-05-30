@@ -1,10 +1,12 @@
 .header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+
+    padding-left: 15px;
+    padding-right: 15px;
     color: white;
-    position: relative;
+    /* position: relative; */
     background-color: rgb(240, 136, 50);
     height: var(--header-height);
 }

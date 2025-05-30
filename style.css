@@ -14,7 +14,7 @@
 @import url(./styles/Order.css);
 
 :root {
-  --header-height: 50px; /* passe diesen Wert ggf. an deine echte Header-Höhe an */
+  --header-height: 80px; /* passe diesen Wert ggf. an deine echte Header-Höhe an */
 }
 
 
@@ -58,4 +58,9 @@ img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+  }
+
+  .footer{
+    color: white;
+    text-decoration: none;
   }
