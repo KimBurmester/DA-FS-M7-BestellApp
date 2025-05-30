@@ -206,6 +206,7 @@ function renderBasket() {
       </div>
     </div>
   `).join('');
+  updateTotals()
 }
 
 function changeAmount(i, amountChange) {
