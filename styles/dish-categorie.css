@@ -1,8 +1,12 @@
 .dish-categorie-title{
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(240, 136, 50, 0.3);
+    cursor: pointer;
 }
