@@ -1,5 +1,5 @@
 /* //NOTE: Basket price and Deliverycosts*/
-.dish-total{
+.dish-total {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,21 +8,21 @@
   margin-bottom: 20px;
   color: rgb(122, 122, 122);
 }
-.dish-subtotal{
+.dish-subtotal {
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   margin-left: 15px;
   margin-right: 15px;
 }
-.dish-deliverycosts{
+.dish-deliverycosts {
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   margin-left: 15px;
   margin-right: 15px;
 }
-.dish-totalprice{
+.dish-totalprice {
   margin-bottom: 10px;
   color: black;
   font-weight: bolder;
@@ -32,81 +32,78 @@
   margin-right: 15px;
 }
 /*//NOTE: Delivery Costs Toggle Button */
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 30px;
-      height: 17px;
-    }
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      transition: 0.4s;
-      border-radius: 17px;
-    }
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 13px;
-      width: 13px;
-      left: 2px;
-      bottom: 2px;
-      background-color: rgb(255, 255, 255);
-      transition: 0.4s;
-      border-radius: 50%;
-    }
-    input:checked + .slider {
-      background-color: rgb(240, 136, 50);
-    }
-    input:checked + .slider:before {
-      transform: translateX(13px);
-    }
-    .toggle-label {
-      margin-left: 10px;
-      vertical-align: middle;
-      font-weight: bold;
-    }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 17px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: rgb(240, 136, 50);
+}
+input:checked + .slider:before {
+  transform: translateX(13px);
+}
+.toggle-label {
+  margin-left: 10px;
+  vertical-align: middle;
+  font-weight: bold;
+}
 
 /* NOTE: Basket*/
-.basket_wrapper{
-    height: auto;
-    width: 332px;
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0px 10px 0 rgb(0, 0, 0, 25%);
+.basket_wrapper {
+  height: auto;
+  width: 332px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0px 10px 0 rgb(0, 0, 0, 25%);
 }
-.basket{
-    /* height: 100vh; */
-    width: 332px;
-    height: auto;
-    position: sticky;
-    top: 0;
-    /* background-color: rgb(23, 240, 236); */
-    /* border: 1px solid rgb(232, 232, 232); */
-    /* box-shadow: 0 0px 10px 0 rgb(0, 0, 0, 15%); */
+.basket {
+  /* height: 100vh; */
+  width: 332px;
+  height: auto;
+  position: sticky;
+  top: 0;
 }
-.basket h1{
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
+.basket h1 {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
 }
-.basket-content{
+.basket-content {
   margin-left: 15px;
 }
-.basket-amount{
+.basket-amount {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,11 +111,9 @@
   padding-right: 15px;
   padding-top: 15px;
   margin-bottom: 15px;
-
-  /* border: 1px solid black; */
 }
 
-.basket-substract{
+.basket-substract {
   align-items: center;
   padding: 5px;
 
@@ -126,14 +121,14 @@
   font-weight: bolder;
 }
 
-.basket-add{
+.basket-add {
   padding: 5px;
   align-items: center;
 
   color: rgb(240, 136, 50);
   font-weight: bolder;
 }
-.basket-price{
+.basket-price {
   padding: 5px;
   align-items: center;
 }
