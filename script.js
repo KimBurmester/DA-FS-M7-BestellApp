@@ -174,10 +174,10 @@ function renderDessertDishesTemplate(i) {
 
 /*//NOTE: Move to Basket Logic */
 function addStarterToBasket(i) {
-  const dish = allDishes.starter[i];
+  const starter = allDishes.starter[i];
   basket.push({
-    name: dish.name,
-    price: dish.price,
+    name: starter.name,
+    price: starter.price,
     amount: 1
   });
   renderBasket();
