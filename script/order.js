@@ -9,7 +9,8 @@ function orderingTheBasket(){
 
   const orderingBtn = document.querySelector('.ordering');
   const msg = document.createElement('div');
-  msg.id = 'order-message'
+  msg.id = 'order-message';
   msg.innerHTML = '<p>Bestellung ist eingegangen</p>';
   orderingBtn.insertAdjacentElement('afterend', msg);
+  dishesInit();
 }

@@ -81,7 +81,7 @@ input:checked + .slider:before {
 .basket_wrapper {
   height: auto;
   width: 332px;
-  position: relative;
+  /* position: relative; */
   background-color: rgb(255, 255, 255);
   box-shadow: 0 0px 10px 0 rgb(0, 0, 0, 25%);
 }
