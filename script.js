@@ -156,7 +156,6 @@ function renderMainDishesTemplate(i) {
             </div>`;
 }
 
-
 /*//NOTE: Dessert Dish Logik */
 function renderDessertDishes() {
     let contentRef = document.getElementById('dessertMenu');
@@ -176,6 +175,7 @@ function renderDessertDishesTemplate(i) {
             </div>`;
 }
 
+/*//NOTE: Move to Basket Logic */
 function addStarterToBasket(i) {
   const dish = allDishes.starter[i];
   basket.push({
@@ -212,9 +212,35 @@ function changeAmount(i, amountChange) {
   basket[i].amount += amountChange;
   if (basket[i].amount <= 0) basket.splice(i, 1);
   renderBasket();
+  updateTotals()
 }
 
 function removeFromBasket(i) {
   basket.splice(i, 1);
   renderBasket();
+  updateTotals()
 }
+
+/*//NOTE: Deliverycosts calculating */
+const deliveryCosts = 5.00;
+
+function updateTotals() {
+  const subtotal = basket.reduce((sum, item) => sum + item.price * item.amount, 0);
+  const deliveryToggle = document.getElementById('deliveryToggle');
+  const deliveryActive = deliveryToggle.checked;
+  const deliveryCost = deliveryActive ? deliveryCosts : 0;
+  const toggleText = deliveryActive
+    ? 'Lieferkosten ein'
+    : 'Lieferkosten aus';
+  document.getElementById('toggleText').textContent = toggleText;
+  document.getElementById('dish-subtotal').textContent      = subtotal.toFixed(2) + ' €';
+  document.getElementById('dish-deliverycosts').textContent = deliveryCost.toFixed(2) + ' €';
+  document.getElementById('dish-totalprice').textContent    = (subtotal + deliveryCost).toFixed(2) + ' €';
+}
+
+/*NOTE: Delivery Toggle Button Event On/Off */
+document.addEventListener('DOMContentLoaded', () => {
+  const deliveryToggle = document.getElementById('deliveryToggle');
+  deliveryToggle.addEventListener('change', updateTotals);
+  updateTotals();
+});
