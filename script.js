@@ -1,4 +1,4 @@
-/*//NOTE: Dishes Render Script */
+/*//NOTE: allDishes Render Script */
 let allDishes = {
   'starter': [
   {
@@ -176,7 +176,7 @@ function renderDessertDishesTemplate(i) {
             </div>`;
 }
 
-
+/*//NOTE:  */
 function renderStarterDishes() {
   const contentRef = document.getElementById('starterMenu');
   contentRef.innerHTML = allDishes.starter
@@ -225,8 +225,8 @@ function renderBasket() {
   `).join('');
 }
 
-function changeAmount(i, delta) {
-  basket[i].amount += delta;
+function changeAmount(i, amountChange) {
+  basket[i].amount += amountChange;
   if (basket[i].amount <= 0) basket.splice(i, 1);
   renderBasket();
 }
