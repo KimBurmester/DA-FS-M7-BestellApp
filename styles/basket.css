@@ -80,14 +80,14 @@
 /* NOTE: Basket*/
 .basket_wrapper{
     height: auto;
-    width: 308px;
+    width: 332px;
     position: relative;
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0px 10px 0 rgb(0, 0, 0, 25%);
 }
 .basket{
     /* height: 100vh; */
-    width: 308px;
+    width: 332px;
     height: auto;
     position: sticky;
     top: 0;
