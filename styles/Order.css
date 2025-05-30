@@ -1,8 +1,7 @@
   .ordering {
-    flex: 0 0 auto;
     text-align: center;
-    margin: 0;
-    padding: 1em;
+    padding: 15px;
     background-color: rgb(240, 136, 50);
     color: white;
+    cursor: pointer;
   }
