@@ -12,6 +12,11 @@
 @import url(./styles/dish-categorie.css);
 @import url(./styles/dish-basket.css);
 
+:root {
+  --header-height: 50px; /* passe diesen Wert ggf. an deine echte Header-Höhe an */
+}
+
+
 * {
     margin: 0;
     padding: 0;

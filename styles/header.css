@@ -6,4 +6,5 @@
     color: white;
     position: relative;
     background-color: rgb(240, 136, 50);
+    height: var(--header-height);
 }
