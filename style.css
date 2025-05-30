@@ -11,6 +11,7 @@
 @import url(./styles/dish-breaks.css);
 @import url(./styles/dish-categorie.css);
 @import url(./styles/dish-basket.css);
+@import url(./styles/Order.css);
 
 :root {
   --header-height: 50px; /* passe diesen Wert ggf. an deine echte Header-Höhe an */
