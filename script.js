@@ -176,23 +176,6 @@ function renderDessertDishesTemplate(i) {
             </div>`;
 }
 
-/*//NOTE:  */
-function renderStarterDishes() {
-  const contentRef = document.getElementById('starterMenu');
-  contentRef.innerHTML = allDishes.starter
-    .map((dish, i) => `
-      <div class="dish-card"
-           onclick="addStarterToBasket(${i})">
-        <div class="dish-header">
-          <div class="dish-title">${dish.name}</div>
-          <div class="dish-adding">+</div>
-        </div>
-        <div class="dish-description">${dish.description}</div>
-        <div class="dish-price">${dish.price.toFixed(2)}€</div>
-      </div>
-    `).join('');
-}
-
 function addStarterToBasket(i) {
   const dish = allDishes.starter[i];
   basket.push({
