@@ -1,0 +1,13 @@
+.dish-picture {
+  width: 100%;
+  height: 200px;      /* feste Höhe für die Vorschau */
+  overflow: hidden;   /* schneidet alles außerhalb des Rechtecks ab */
+}
+
+/* Das <img> wird gestreckt, füllt die Container-Fläche, wird aber nicht verzerrt: */
+.dish-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* füllt, schneidet, ohne das Seitenverhältnis zu verzerren */
+  display: block;     /* entfernt evtl. unerwünschte Inline-Abstände unter dem Bild */
+}

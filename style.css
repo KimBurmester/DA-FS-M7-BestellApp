@@ -12,6 +12,7 @@
 @import url(./styles/dish-categorie.css);
 @import url(./styles/dish-basket.css);
 @import url(./styles/Order.css);
+@import url(./styles/dish-picture.css);
 
 :root {
   --header-height: 80px; /* passe diesen Wert ggf. an deine echte Header-Höhe an */
@@ -54,11 +55,11 @@ html, body{
     /* border: 5px solid rgb(255, 255, 255); */
   }
   
-img {
+/* img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-  }
+  } */
 
   .footer a{
     color: white;
