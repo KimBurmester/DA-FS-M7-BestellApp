@@ -14,6 +14,7 @@
 @import url(./styles/Order.css);
 @import url(./styles/dish-picture.css);
 @import url(./styles/dish-mobile.css);
+@import url(./styles/dish-picture-header.css);
 
 :root {
   --header-height: 80px;
@@ -37,9 +38,10 @@ html, body{
   padding: 0;
   display: flex;
   flex-direction: column;
+    background-color: rgb(254, 247, 231);
 }
 
-.ramen-logo {
+/* .ramen-logo {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -48,7 +50,7 @@ html, body{
     margin-top: 150px;
     text-align: center;
     border-radius: 50%;
-  }
+  } */
 
   .footer a{
     color: white;
