@@ -116,7 +116,6 @@ function isMobileView() {
 
 function attachResizeHandler() {
   let resizeTimeout;
-
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
@@ -124,8 +123,6 @@ function attachResizeHandler() {
     }, 150);
   });
 }
-
-
 
 function dishesInit() {
     renderStarterDishes();
@@ -142,17 +139,7 @@ function renderStarterDishes() {
   }
 }
 function renderStarterDishesTemplate(i) {
-/*     return `<div class="dish-card" id="dish-card" onclick="addStarterToBasket(${i}, 'starter', '${basket}')">
-              <div class="dish-header">
-                <div class="dish-title" id="dish-title">${allDishes.starter[i].name}</div>
-                <div class="dish-adding">+</div>
-              </div>
-              <div class="dish-description" id="dish-description">${allDishes.starter[i].description}</div>
-              <div class="dish-price" id="dish-price">${allDishes.starter[i].price.toFixed(2)}€</div>
-            </div>`; */
-
-              const mobile = isMobileView();
-
+  const mobile = isMobileView();
   return `
     <div class="dish-card" id="dish-card" onclick="addStarterToBasket(${i}, 'starter', '${basket}')">
       <div class="dish-header">
@@ -161,18 +148,10 @@ function renderStarterDishesTemplate(i) {
         </div>
         <div class="dish-adding">+</div>
       </div>
-      ${/* Nur einfügen, wenn wir NICHT im Mobile sind */''}
-      ${!mobile
-        ? `<div class="dish-description" id="dish-description">
-             ${allDishes.starter[i].description}
-           </div>`
-        : ``
-      }
+      ${!mobile ? `<div class="dish-description" id="dish-description">
+             ${allDishes.starter[i].description}</div>` : ``}
       <div class="dish-price" id="dish-price">
-        ${allDishes.starter[i].price.toFixed(2)}€
-      </div>
-    </div>
-  `;
+        ${allDishes.starter[i].price.toFixed(2)}€</div></div>`;
 }
 
 /*//NOTE: Main Dish Logik */
@@ -185,7 +164,6 @@ function renderMainDishes() {
 }
 function renderMainDishesTemplate(i) {
   const mobile = isMobileView();
-
   return `
     <div class="dish-card" id="dish-card" onclick="addDishToBasket(${i}, 'dishes', '${basket}')">
       <div class="dish-header">
@@ -193,18 +171,10 @@ function renderMainDishesTemplate(i) {
           ${allDishes.dishes[i].name}
         </div>
         <div class="dish-adding">+</div>
-      </div>
-      ${!mobile
-        ? `<div class="dish-description" id="dish-description">
+      </div> ${!mobile ? `<div class="dish-description" id="dish-description">
              ${allDishes.dishes[i].description}
-           </div>`
-        : ``
-      }
-      <div class="dish-price" id="dish-price">
-        ${allDishes.dishes[i].price.toFixed(2)}€
-      </div>
-    </div>
-  `;
+           </div>`: ``}
+           <div class="dish-price" id="dish-price">${allDishes.dishes[i].price.toFixed(2)}€</div></div>`;
 }
 
 /*//NOTE: Dessert Dish Logik */
@@ -216,7 +186,6 @@ function renderDessertDishes() {
 }
 function renderDessertDishesTemplate(i) {
   const mobile = isMobileView();
-
   return `
     <div class="dish-card" id="dish-card" onclick="addDessertToBasket(${i}, 'dessert', '${basket}')">
       <div class="dish-header">
@@ -224,18 +193,9 @@ function renderDessertDishesTemplate(i) {
           ${allDishes.dessert[i].name}
         </div>
         <div class="dish-adding">+</div>
-      </div>
-      ${!mobile
-        ? `<div class="dish-description" id="dish-description">
-             ${allDishes.dessert[i].description}
-           </div>`
-        : ``
-      }
-      <div class="dish-price" id="dish-price">
-        ${allDishes.dessert[i].price.toFixed(2)}€
-      </div>
-    </div>
-  `;        
+      </div>${!mobile ? `<div class="dish-description" id="dish-description">
+             ${allDishes.dessert[i].description} </div>` : ``}
+      <div class="dish-price" id="dish-price">${allDishes.dessert[i].price.toFixed(2)}€</div></div>`;        
 }
 
 /*//NOTE: Move to Basket Logic */

@@ -41,17 +41,6 @@ html, body{
     background-color: rgb(254, 247, 231);
 }
 
-/* .ramen-logo {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 150px;
-    text-align: center;
-    border-radius: 50%;
-  } */
-
   .footer a{
     color: white;
     text-decoration: none;

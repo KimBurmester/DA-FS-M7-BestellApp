@@ -3,24 +3,11 @@
     display: flex;
     flex-direction: row;
     flex: 1;
-    /* background-color: rgb(50, 110, 240); */
 }
 .content{
     height: auto;
     width: calc(100% - 332px);
-    /* background-color: rgb(236, 236, 236); */
 }
-/* .content-img{
-    height: 250px;
-    width: 100%;
-    display: flex;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
-    position: relative;
-
-} */
 
 #mainMenu{
     height: auto;

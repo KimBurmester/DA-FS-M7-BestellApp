@@ -14,84 +14,61 @@
 }
 
 .dish-picture-header .bg-image {
-  display: block;        /* Verhindert kleine Lücken unterhalb von inline-Elements */
-  width: 100%;           /* Füllt immer die volle Breite des Wrappers aus */
-  height: auto;          /* Höhe wird proportional zur Breite berechnet */
+  display: block;     
+  width: 100%;      
+  height: auto;       
 }
 
 .dish-picture-header .circle-image{
       position: absolute;
-  top: 100%;             /* Setzt den Bezugspunkt an die Unterkante des Hintergrunds */
-  left: 50%;             /* horizontal mittig im Wrapper */
+  top: 100%;       
+  left: 50%;    
   transform: translate(-80%, -380%);
-  /* ‣ translateX(-50%) zentriert das Bild horizontal genau in der Mitte
-     ‣ translateY(-50%) verschiebt es nach oben um die Hälfte seiner eigenen Höhe,
-       wodurch es genau 50% über das Hintergrundbild hinausragt */
 
-  width: auto;          /* Beispiel-Breite für dein rundes Bild */
-  height: 250px;         /* Höhe muss gleich Breite sein, damit es quadratisch ist */
-  object-fit: cover;     /* Stellt sicher, dass das Bild skaliert/zentriert wird, falls Seite anders dimensioniert */
+  width: auto;    
+  height: 250px;    
+  object-fit: cover;    
 
-  border-radius: 50%;    /* Macht das quadratische Bild rund */
-  z-index: 1000;           /* Sorgt dafür, dass es über dem Hintergrund liegt */
+  border-radius: 50%; 
+  z-index: 1000;     
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 
 @media (max-width: 1100px) {
       .dish-picture-header {
-    height: 200px;             /* Hintergrund bleibt 200px hoch, kann aber auch leicht angepasst werden */
-    margin-bottom: 100px;      /* Puffer nach unten (am besten immer mind. Hälfte der Kreis-Höhe beibehalten) */
+    height: 200px;    
+    margin-bottom: 100px;   
   }
 
   .dish-picture-header .circle-image {
-    /* 250px → 200px (Kreis schrumpft) */
     width: auto;
     height: 200px;
-
-    /* Position mit translate anpassen:
-       – Mit width:200px möchten wir, dass 100px (die Hälfte) überlappen. 
-       – Also translateY muss immer: translateY(-50%) sein, 
-         damit 100px über und 100px unter sind. */
     transform: translate(-90%, -460%);
-
-    /* Da left:50% und translateX(-50%) gleich bleiben, 
-       ändert sich die horizontale Zentrierung nicht. */
   }
 }
 
 @media (max-width: 680px) {
   .dish-picture-header {
-    /* Optional kannst du die bg-Box-Höhe reduzieren, damit es stimmiger aussieht:
-       height: 180px; */
-    margin-bottom: 80px;       /* halbe Höhe des nächsten Kreises (160px) → 80px Puffer */
+    margin-bottom: 80px;  
   }
 
   .dish-picture-header .circle-image {
-    /* 200px → 160px (Kreis weiter schrumpfen) */
     width: 160px;
     height: 160px;
-
-    /* Transform bleibt gleich: translate(-50%, -50%) 
-       sorgt dafür, dass die obere Hälfte (80px) über dem bg-Container liegt,
-       und die untere Hälfte (80px) unterhalb. */
     transform: translate(-50%, -50%);
   }
 }
 
 @media (max-width: 450px) {
   .dish-picture-header {
-    /* Wenn der bg-Container kleiner wird, z. B. auf 150px Höhe setzen: */
     height: 150px;
-    margin-bottom: 60px;       /* halbe Höhe des nächsten Kreises (120px): 60px */
+    margin-bottom: 60px;   
   }
 
   .dish-picture-header .circle-image {
-    /* 160px → 120px (Kreis noch kleiner machen) */
     width: 120px;
     height: 120px;
-
-    /* Transform bleibt bei translate(-50%,-50%), sodass 60px über und 60px unter sind. */
     transform: translate(-50%, -50%);
   }
 }
