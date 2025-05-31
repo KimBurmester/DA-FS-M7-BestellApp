@@ -22,3 +22,8 @@
     background-image: url("./assets/img/ramen-7187809_1280.jpg");
     /* border: 1px solid black; */
 }
+
+#mainMenu{
+    height: auto;
+    overflow: visible;
+}

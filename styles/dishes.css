@@ -3,14 +3,19 @@
     display: flex;
     justify-content: center;
     height: auto;
+    overflow: visible;
     width: 100%;
+    max-height: none !important;
     /* background-color: aquamarine; */
 }
 .dish-contents{
+    height: auto;
+    overflow: visible;
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    max-height: none !important;
     /* background-color: rgb(127, 255, 138); */
 }
 
