@@ -144,7 +144,7 @@ function renderMainDishes() {
   }
 }
 function renderMainDishesTemplate(i) {
-    return `<div class="dish-card" id="dish-card" onclick="addToBasket(${i}, 'dishes', '${basket}')">
+    return `<div class="dish-card" id="dish-card" onclick="addDishToBasket(${i}, 'dishes', '${basket}')">
               <div class="dish-header">
                 <div class="dish-title" id="dish-title">${allDishes.dishes[i].name}</div>
                 <div class="dish-adding">+</div>
@@ -162,7 +162,7 @@ function renderDessertDishes() {
     }
 }
 function renderDessertDishesTemplate(i) {
-    return `<div class="dish-card" id="dish-card" onclick="addToBasket(${i}, 'dessert', '${basket}')">
+    return `<div class="dish-card" id="dish-card" onclick="addDessertToBasket(${i}, 'dessert', '${basket}')">
               <div class="dish-header">
                 <div class="dish-title" id="dish-title">${allDishes.dessert[i].name}</div>
                 <div class="dish-adding">+</div>
@@ -178,6 +178,24 @@ function addStarterToBasket(i) {
   basket.push({
     name: starter.name,
     price: starter.price,
+    amount: 1
+  });
+  renderBasket();
+}
+function addDishToBasket(i) {
+  const dish = allDishes.dishes[i];
+  basket.push({
+    name: dish.name,
+    price: dish.price,
+    amount: 1
+  });
+  renderBasket();
+}
+function addDessertToBasket(i) {
+  const dessert = allDishes.dessert[i];
+  basket.push({
+    name: dessert.name,
+    price: dessert.price,
     amount: 1
   });
   renderBasket();
@@ -225,26 +243,6 @@ function removeFromBasket(i) {
 
 /*//NOTE: Deliverycosts calculating */
 const deliveryCosts = 5.00;
-
-/* function updateTotals() {
-  const subtotal = basket.reduce((sum, item) => sum + item.price * item.amount, 0);
-  const deliveryToggle = document.getElementById('deliveryToggle');
-  const deliveryActive = deliveryToggle.checked;
-  const deliveryCost = deliveryActive ? deliveryCosts : 0;
-  const toggleText = deliveryActive
-    ? 'Lieferkosten ein'
-    : 'Lieferkosten aus';
-  document.getElementById('toggleText').textContent = toggleText;
-  document.getElementById('dish-subtotal').textContent      = subtotal.toFixed(2) + ' €';
-  document.getElementById('dish-deliverycosts').textContent = deliveryCost.toFixed(2) + ' €';
-  document.getElementById('dish-totalprice').textContent    = (subtotal + deliveryCost).toFixed(2) + ' €';
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const deliveryToggle = document.getElementById('deliveryToggle');
-  deliveryToggle.addEventListener('change', updateTotals);
-  updateTotals();
-}); */
 
 function calculateSubtotal() {
   return basket.reduce((sum, item) => sum + item.price * item.amount, 0);
