@@ -21,13 +21,26 @@
     background: #fff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
   } */
-  .basket_wrapper {
+/*   .basket_wrapper {
     position: relative !important;
-    bottom: 0 !important;     /* ganz unten am Viewport */
+    bottom: 0 !important;
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
-    transform: translateY(100%);  /* zugeklappt: komplett nach unten schieben */
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000 !important;
+    background: #fff;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1) !important;
+  } */
+  .basket_wrapper {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+
+    transform: translateY(calc(100% - 3rem));
     transition: transform 0.3s ease;
     z-index: 1000 !important;
     background: #fff;
@@ -44,12 +57,16 @@
     display: block;
   }
   #basket-toggle {
+    display: block;
+    width: 100%;
+    height: 3rem; /* muss zum translateY calc passen */
+    line-height: 3rem;
     background-color: #21b7ed;
     color: white;
+    text-align: center;
     cursor: pointer;
-    padding: 1em;
     font-size: 1.2em;
-    border-bottom: 1px solid #ccc;
+    user-select: none;
   }
  /* geänderter Code */
 
@@ -74,13 +91,28 @@
 @media (max-width: 450px){
   .basket_wrapper {
     position: fixed !important;
+    bottom: 0;
     left: 0;
     right: 0;
-    width: auto;
-    transform: translateY(-100%);
+    width: 100% !important;
+
+    transform: translateY(calc(100% - 3rem));
     transition: transform 0.3s ease;
-    z-index: 1000;
+    z-index: 1000 !important;
     background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1) !important;
+  }
+
+    #basket-toggle {
+    display: block;
+    width: 100%;
+    height: 3rem; /* muss zum translateY calc passen */
+    line-height: 3rem;
+    background-color: #21b7ed;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2em;
+    user-select: none;
   }
 }
