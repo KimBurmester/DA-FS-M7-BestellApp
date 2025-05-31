@@ -8,31 +8,6 @@
     width: 100% !important;
     height: auto !important;
   }
-  /* geänderter Code */
-/*   .basket_wrapper {
-    position: fixed !important;
-    left: 0;
-    right: 0;
-    width: auto;
-    top: 115px;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
-  } */
-/*   .basket_wrapper {
-    position: relative !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-    z-index: 1000 !important;
-    background: #fff;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.1) !important;
-  } */
   .basket_wrapper {
     position: fixed !important;
     bottom: 0;
@@ -44,7 +19,7 @@
     transition: transform 0.3s ease;
     z-index: 1000 !important;
     background: #fff;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1) !important;
   }
 
   .basket_wrapper.open {
@@ -68,8 +43,6 @@
     font-size: 1.2em;
     user-select: none;
   }
- /* geänderter Code */
-
   .basket {
     width: 100% !important;
     height: auto !important;
@@ -83,36 +56,117 @@
     display: block !important;
   }
   .dish-card {
-    width: 100% !important;
-    margin: 0 0 10px 0 !important;
+    margin: 0 0 10px 0;
   }
 }
 
-@media (max-width: 450px){
-  .basket_wrapper {
-    position: fixed !important;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100% !important;
+@media (max-width: 670px) {
+  /* ----------------------------------------------------
+     1. Eltern-Container nicht mehr fixieren, sondern auto
+     ---------------------------------------------------- */
 
-    transform: translateY(calc(100% - 3rem));
-    transition: transform 0.3s ease;
-    z-index: 1000 !important;
-    background: #fff;
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.1) !important;
+  /* Stelle sicher, dass .content bzw. .main nicht mehr 
+     auf eine feste Höhe oder overflow:hidden stehen. */
+  .content,
+  .main {
+    flex: 1 0 auto; /* wieder flexibel wachsen lassen */
+    height: auto; /* keine fixe Höhe */
+    overflow: visible; /* nichts abschneiden */
   }
 
-    #basket-toggle {
+  /* Der Wrapper um die Dish-Section */
+  .dish-content-wrapper {
+    display: block; /* auf schmalen Viewports lieber block, 
+                             damit keine Flex-Höhe klemmt */
+    width: 100%;
+    height: auto;
+    overflow: visible; /* verhindert, dass etwas gekappt wird */
+  }
+
+  /* Der innere Container mit allen Dish-Cards */
+  .dish-contents {
+    display: block; /* ebenfalls auf block umstellen */
+    width: 100%;
+    height: auto;
+    overflow: visible; /* Inhalte sollen nicht abgeschnitten werden */
+    padding-bottom: 1rem; /* damit unten ein kleiner Puffer ist */
+  }
+
+  /* ----------------------------------------------------
+     2. Dish-Cards untereinander anordnen (kein flex mehr)
+     ---------------------------------------------------- */
+
+  .dish-card {
+    /* Stelle sicher, dass jede Karte insgesamt genug Platz hat,
+       und der Container nicht in die Höhe beschränkt wird */
     display: block;
     width: 100%;
-    height: 3rem; /* muss zum translateY calc passen */
-    line-height: 3rem;
-    background-color: #21b7ed;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    font-size: 1.2em;
-    user-select: none;
+    height: auto;
+    margin: 8px 0; /* etwas Abstand zwischen den Karten */
+    padding: 0.5px; /* kompakteres Innen-padding */
+    box-sizing: border-box;
+  }
+
+  /* ----------------------------------------------------
+     3. Falls du weiterhin möchten scrollen (anstatt overflow 
+        visible), aktiviere overflow-y auf .dish-contents:
+     ---------------------------------------------------- */
+
+  .dish-contents {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  /* ----------------------------------------------------
+     4. Optional: Überschüssigen Inhalt nach unten abpolstern
+     ---------------------------------------------------- */
+
+  /* Damit wirklich nichts direkt am Rand kleben bleibt und 
+     das letzte Gericht nicht verdeckt wird */
+  .dish-contents::after {
+    content: "";
+    display: block;
+    height: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  /* 1. Beschreibung ausblenden */
+  .dish-description {
+    display: none;
+  }
+
+  /* 2. Wrapper für Titel + Preis per Flex-Layout */
+  .dish-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px; /* Optional: horizontaler Abstand, falls gewünscht */
+  }
+
+  .dish-title {
+    padding-top: 15px; /* Falls du auf Mobile denselben Abstand wie auf Desktop willst */
+    padding-left: 0; /* Linker Einzug entfällt auf ganz kleinen Screens */
+    font-size: 1.1em; /* Etwas kleinere Schrift für schmale Geräte */
+  }
+
+  .dish-price {
+    padding-top: 15px;
+    padding-left: 0;
+    font-weight: bold;
+    font-size: 1.05em; /* Kleinere Schrift, damit beides nebeneinander passt */
+    color: rgb(240, 136, 50);
+  }
+
+  /* 3. Optional: Bild verkleinern, damit mehr Platz in der Kachel bleibt */
+  .dish-picture img {
+    width: 60px; /* Noch kompakter als bei 699px */
+    height: auto;
+  }
+
+  /* 4. .dish-card-Abstände auf Mobile noch einmal reduzieren */
+  .dish-card {
+    margin: 5px 0; /* weniger Abstand zwischen den Karten */
+    padding-bottom: 8px; /* etwas kompakter nach unten */
   }
 }

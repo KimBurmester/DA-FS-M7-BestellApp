@@ -5,7 +5,7 @@
 @import url(./styles/hamburger-menu.css);
 @import url(./styles/header.css);
 @import url(./styles/main.css);
-@import url(./styles/mobile.css);
+/* @import url(./styles/mobile.css); */
 @import url(./styles/imprint.css);
 @import url(./styles/logo.css);
 @import url(./styles/dish-breaks.css);
@@ -13,11 +13,11 @@
 @import url(./styles/dish-basket.css);
 @import url(./styles/Order.css);
 @import url(./styles/dish-picture.css);
+@import url(./styles/dish-mobile.css);
 
 :root {
-  --header-height: 80px; /* passe diesen Wert ggf. an deine echte Header-Höhe an */
+  --header-height: 80px;
 }
-
 
 * {
     margin: 0;
@@ -41,25 +41,14 @@ html, body{
 
 .ramen-logo {
     position: absolute;
-    /* bottom: -75px; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     margin-top: 150px;
     text-align: center;
-    /* top: 270px; */
     border-radius: 50%;
-
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-    /* border: 5px solid rgb(255, 255, 255); */
   }
-  
-/* img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-  } */
 
   .footer a{
     color: white;
