@@ -22,7 +22,7 @@
   border-radius: 8px;
   display: none;
   flex-direction: column;
-  z-index: 1000;
+  z-index: 1001;
   box-shadow: 0 0px 10px 0 rgb(0, 0, 0, 15%);
 }
 
