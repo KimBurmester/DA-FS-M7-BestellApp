@@ -1,37 +1,28 @@
-.dish-picture-header{
+.dish-picture-header {
+  position: relative;
   width: 100%;
-  height: 200px;  
-  overflow: hidden;  
-  margin-bottom: 100px; 
+  height: 200px;
+  /* overflow: hidden; */
+  margin-bottom: 100px;
 }
-
 
 .dish-picture-header img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
-  display: block;  
+  object-fit: cover;
+  display: block;
 }
 
-.dish-picture-header .bg-image {
-  display: block;     
-  width: 100%;      
-  height: auto;       
-}
-
-.dish-picture-header .circle-image{
-      position: absolute;
-  top: 100%;       
-  left: 50%;    
-  transform: translate(-80%, -380%);
-
-  width: auto;    
-  height: 250px;    
-  object-fit: cover;    
-
-  border-radius: 50%; 
-  z-index: 1000;     
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+.dish-picture-header .logo-overlay {
+  position: absolute;
+  top: 100%;                    /* vertikal zentriert */
+  left: 50%;                   /* horizontal zentriert */
+  transform: translate(-50%, -50%);
+  width: 200px;                /* responsiv skalierbar */
+  max-width: 40%;              /* nie breiter als 25% des Containers */
+  height: auto;
+  z-index: 1000;                 /* liegt über dem Headerbild */
+  pointer-events: none;       /* optional, falls Logo nicht klickbar sein soll */
 }
 
 

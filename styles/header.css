@@ -9,3 +9,7 @@
     background-color: rgb(240, 136, 50);
     height: var(--header-height);
 }
+
+.logo{
+    width: 100px;
+}
