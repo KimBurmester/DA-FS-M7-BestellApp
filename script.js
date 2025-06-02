@@ -52,8 +52,8 @@ let allDishes = {
     name: "Lachsfilet mit Gemüse",
     description: "Gebratenes Lachsfilet auf einem Bett aus mediterranem Gemüse",
     price: 14.80
-  }
- /*  {
+  },
+  {
     name: "Rinderfilet mit Pfeffersauce",
     description: "Gegrilltes Filet mit grünem Pfeffer, serviert mit Kartoffelgratin",
     price: 21.90
@@ -77,7 +77,7 @@ let allDishes = {
     name: "Schnitzel Wiener Art",
     description: "Kalbsschnitzel mit Pommes frites und Zitrone",
     price: 15.90
-  } */
+  }
   ],
   'dessert' : [
   {
@@ -180,6 +180,7 @@ function renderMainDishesTemplate(i) {
 /*//NOTE: Dessert Dish Logik */
 function renderDessertDishes() {
     let contentRef = document.getElementById('dessertMenu');
+    contentRef.innerHTML = "";
     for (let i = 0; i < allDishes.dessert.length; i++) {
       contentRef.innerHTML += renderDessertDishesTemplate(i);
     }
