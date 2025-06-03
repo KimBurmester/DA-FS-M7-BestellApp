@@ -1,0 +1,18 @@
+.website-title{
+    padding-left: 15px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.website-title-text{
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 25px;
+}
+
+.website-rating{
+    font-size: smaller;
+    margin-top: 25px;
+    color: rgb(240, 136, 50);
+}

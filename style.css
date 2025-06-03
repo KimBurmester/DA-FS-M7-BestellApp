@@ -15,6 +15,7 @@
 @import url(./styles/dish-picture.css);
 @import url(./styles/dish-mobile.css);
 @import url(./styles/dish-picture-header.css);
+@import url(./styles/website-title.css);
 
 :root {
   --header-height: 80px;
