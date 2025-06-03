@@ -13,6 +13,8 @@
   flex-direction: column;
   width: 100%;
   height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
   overflow: visible;
   max-height: none !important;
 }
