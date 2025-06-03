@@ -32,7 +32,7 @@ Dieses Projekt wurde mit folgenden Technologien umgesetzt:
 - ✅ Dynamischer Warenkorb
 - ✅ Klare Kategorisierung der Speisen
 
-*(Screenshot folgt im Repository)*
+![Screenshot 2025-06-03 200741](https://github.com/user-attachments/assets/efa5d093-b9f0-4c3d-9b8f-09f1e10e1569)
 
 ---
 
