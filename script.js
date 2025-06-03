@@ -110,6 +110,10 @@ let allDishes = {
 
 let basket = [];
 
+function orderingTheBasket() {
+  console.log("Ich werde aufgerufen");
+}
+
 function isMobileView() {
   return window.innerWidth <= 800;
 }
