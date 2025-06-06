@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   height: 200px;
-  /* overflow: hidden; */
   margin-bottom: 120px;
 }
 
@@ -15,13 +14,13 @@
 
 .dish-picture-header .logo-overlay {
   position: absolute;
-  top: 100%;                    /* vertikal zentriert */
-  left: 50%;                   /* horizontal zentriert */
+  top: 100%;                    
+  left: 50%;                 
   transform: translate(-50%, -50%);
-  width: 200px;                /* responsiv skalierbar */
-  max-width: 40%;              /* nie breiter als 25% des Containers */
+  width: 200px;              
+  max-width: 40%;             
   height: auto;
-  z-index: 1000;                 /* liegt über dem Headerbild */
-  pointer-events: none;       /* optional, falls Logo nicht klickbar sein soll */
+  z-index: 1000;             
+  pointer-events: none;      
 }
 
