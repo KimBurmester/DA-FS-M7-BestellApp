@@ -14,14 +14,12 @@
     left: 0;
     right: 0;
     width: 100% !important;
-
     transform: translateY(calc(100% - 3rem));
     transition: transform 0.3s ease;
     z-index: 1000 !important;
     background: #fff;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1) !important;
   }
-
   .basket_wrapper.open {
     transform: translateY(0) !important;
   }
@@ -67,14 +65,12 @@
     height: auto;
     overflow: visible; 
   }
-
   .dish-content-wrapper {
     display: block; 
     width: 100%;
     height: auto;
     overflow: visible;
   }
-
   .dish-contents {
     display: block;
     width: 100%;
@@ -82,7 +78,6 @@
     overflow: visible;
     padding-bottom: 1rem;
   }
-
   .dish-card {
     display: block;
     width: 100%;
@@ -91,12 +86,10 @@
     padding: 0.5px;
     box-sizing: border-box;
   }
-
   .dish-contents {
     max-height: 80vh;
     overflow-y: auto;
   }
-
   .dish-contents::after {
     content: "";
     display: block;
@@ -108,33 +101,24 @@
   .dish-description {
     display: none;
   }
-
   .dish-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 15px; 
   }
-
   .dish-title {
     padding-top: 15px;
     padding-left: 0; 
     font-size: 1.1em; 
   }
-
   .dish-price {
     padding-top: 15px;
-    padding-left: 0;
+    padding-left: 15px;
     font-weight: bold;
     font-size: 1.05em;
     color: rgb(240, 136, 50);
   }
-
-  .dish-picture img {
-    width: 60px;
-    height: auto;
-  }
-
   .dish-card {
     margin: 5px 0; 
     padding-bottom: 8px; 
