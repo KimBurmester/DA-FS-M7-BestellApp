@@ -12,5 +12,24 @@ function orderingTheBasket(){
   msg.id = 'order-message';
   msg.innerHTML = '<p>Bestellung ist eingegangen</p>';
   orderingBtn.insertAdjacentElement('afterend', msg);
+  setTimeout(() => {
+    msg.remove();
+  }, 5000);
   dishesInit();
+  autoResetDeliveryToggle();
+}
+
+function autoResetDeliveryToggle() {
+  setTimeout(() => {
+    const toggle = document.getElementById('deliveryToggle');
+    toggle.checked = false;
+    document.getElementById('dish-deliverycosts').innerHTML = '<span>0.00 €</span>';
+    document.getElementById('dish-totalprice').innerHTML = '<span>0.00 €</span>';
+
+
+    const toggleText = document.getElementById('toggleText');
+    if (toggleText) {
+      toggleText.textContent = 'Lieferkosten aus';
+    }
+  }, 5000);
 }
