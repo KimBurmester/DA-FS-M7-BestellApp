@@ -1,10 +1,10 @@
 let basket = [];
 
-function isMobileView() {
+function isMobileView() { // NOTE: Starter, Main and Dessert Opening
   return window.innerWidth <= 800;
 }
 
-function attachResizeHandler() {
+function attachResizeHandler() { // NOTE: Starter, Main and Dessert Opening
   let resizeTimeout;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
@@ -32,7 +32,7 @@ function removeFromBasket(i) {
   updateTotals()
 }
 
-/*//NOTE: Deliverycosts calculating */
+
 const deliveryCosts = 5.00;
 
 function calculateSubtotal() {
@@ -74,7 +74,6 @@ function updateTotals() {
 document.addEventListener('DOMContentLoaded', () => {
   dishesInit(); 
   attachResizeHandler(); 
-  
   const deliveryToggle = document.getElementById('deliveryToggle');
   deliveryToggle.addEventListener('change', updateTotals);
   updateTotals();

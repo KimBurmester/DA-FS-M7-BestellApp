@@ -29,6 +29,7 @@ function renderMainDishesTemplate(i) {
            <div class="dish-price" id="dish-price">${allDishes.dishes[i].price.toFixed(2)}€</div></div>`;
 }
 
+
 function renderDessertDishesTemplate(i) {
   const mobile = isMobileView();
   return `

@@ -1,4 +1,3 @@
-/*//NOTE: Starter Dish Logik */
 function renderStarterDishes() {
   let contentRef = document.getElementById('starterMenu');
   contentRef.innerHTML = "";
@@ -7,7 +6,6 @@ function renderStarterDishes() {
   }
 }
 
-/*//NOTE: Main Dish Logik */
 function renderMainDishes() {
   let contentRef = document.getElementById('mainMenu');
   contentRef.innerHTML = "";
@@ -16,7 +14,6 @@ function renderMainDishes() {
   }
 }
 
-/*//NOTE: Dessert Dish Logik */
 function renderDessertDishes() {
     let contentRef = document.getElementById('dessertMenu');
     contentRef.innerHTML = "";
