@@ -22,7 +22,6 @@
     background: #fff;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1) !important;
   }
-
   .basket_wrapper.open {
     transform: translateY(0) !important;
   }
@@ -44,8 +43,6 @@
     font-size: 1.2em;
     user-select: none;
   }
-  /* geänderter Code */
-
   .basket {
     width: 100% !important;
     height: auto !important;
@@ -62,7 +59,6 @@
     width: 100% !important;
     margin: 0 0 10px 0 !important;
   }
-  /*Dish Content*/
 .dish-content-wrapper{
     display: flex;
     justify-content: center;
@@ -70,7 +66,6 @@
     overflow: visible;
     width: 100%;
     max-height: none !important;
-    /* background-color: aquamarine; */
 }
 .dish-contents{
     height: auto;
@@ -80,7 +75,6 @@
     flex-direction: column;
     width: 100%;
     max-height: none !important;
-    /* background-color: rgb(127, 255, 138); */
 }
 
 .dish-card{
@@ -96,8 +90,6 @@
   cursor: pointer;
   height: auto;
 }
-
-
 .dish-title{
   position: relative;
   width: 99%;
@@ -132,14 +124,12 @@
 .dish-header{
   display: flex;
 }
-
 .dish-card:hover{
   background-color: rgb(240, 136, 50, 0.1);
 }
 .dish-adding:hover{
   background-color: rgba(209, 99, 8, 0.1);
 }
-
 .basket-trash{
   cursor: pointer;
 }
@@ -147,35 +137,7 @@
   background-color: rgba(209, 99, 8, 0.1);
 }
 }
-
 @media (max-width: 450px) {
-/*  .basket_wrapper {
-    position: fixed !important;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100% !important;
-
-    transform: translateY(calc(100% - 3rem));
-    transition: transform 0.3s ease;
-    z-index: 1000 !important;
-    background: #fff;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1) !important;
-  }
-
-  #basket-toggle {
-    display: block;
-    width: 100%;
-    height: 3rem;
-    line-height: 3rem;
-    background-color: #21b7ed;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    font-size: 1.2em;
-    user-select: none;
-  } */
-
     .main {
     display: flex !important;
     flex-direction: column !important;
@@ -186,7 +148,6 @@
     width: 100% !important;
     height: auto !important;
   }
-
   .basket_wrapper {
     position: fixed !important;
     bottom: 0;
@@ -194,14 +155,12 @@
     right: 0;
     width: 100% !important;
     height: auto;
-
     transform: translateY(calc(100% - 3rem));
     transition: transform 0.3s ease;
     z-index: 1000 !important;
     background: #fff;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1) !important;
   }
-
   .basket_wrapper.open {
     transform: translateY(0) !important;
   }
@@ -214,7 +173,7 @@
   #basket-toggle {
     display: block;
     width: 100%;
-    height: auto; /* muss zum translateY calc passen */
+    height: auto;
     line-height: 3rem;
     background-color: #21b7ed;
     color: white;
@@ -223,8 +182,6 @@
     font-size: 1.2em;
     user-select: none;
   }
-  /* geänderter Code */
-
   .basket {
     width: 100% !important;
     height: auto !important;
@@ -242,7 +199,6 @@
     height: auto;
     margin: 0 0 10px 0 !important;
   }
-  /*Dish Content*/
 .dish-content-wrapper{
     display: flex;
     justify-content: center;
@@ -250,7 +206,6 @@
     overflow: visible;
     width: 100%;
     max-height: none !important;
-    /* background-color: aquamarine; */
 }
 .dish-contents{
     height: auto;
@@ -260,9 +215,7 @@
     flex-direction: column;
     width: 100%;
     max-height: none !important;
-    /* background-color: rgb(127, 255, 138); */
 }
-
 .dish-card{
   background-color: rgb(255, 255, 255);
   width: 100%;
@@ -276,8 +229,6 @@
   cursor: pointer;
   height: auto;
 }
-
-
 .dish-title{
   position: relative;
   width: 99%;
@@ -312,14 +263,12 @@
 .dish-header{
   display: flex;
 }
-
 .dish-card:hover{
   background-color: rgb(240, 136, 50, 0.1);
 }
 .dish-adding:hover{
   background-color: rgba(209, 99, 8, 0.1);
 }
-
 .basket-trash{
   cursor: pointer;
 }
