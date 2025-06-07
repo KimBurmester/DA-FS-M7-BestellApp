@@ -129,9 +129,9 @@ function attachResizeHandler() {
 }
 
 function dishesInit() {
-    renderStarterDishes();
+/*  renderStarterDishes();
     renderMainDishes();
-    renderDessertDishes();
+    renderDessertDishes(); */
 };
 
 /*//NOTE: Starter Dish Logik */
