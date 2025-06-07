@@ -1,4 +1,4 @@
-/*//NOTE: Move To Basket Logic */
+/*//NOTE: Basket Logic */
 document.getElementById('basket-toggle')
   .addEventListener('click', () => {
     document.querySelector('.basket_wrapper')

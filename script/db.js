@@ -1,3 +1,4 @@
+/*//NOTE: allDishes Render Script */
 let allDishes = {
   'starter': [
   {

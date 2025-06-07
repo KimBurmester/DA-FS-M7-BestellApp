@@ -7,8 +7,6 @@
 .content{
     height: auto;
     width: calc(100% - 332px);
-    /* padding-left: 20px;
-    padding-right: 20px; */
 }
 
 #mainMenu{
