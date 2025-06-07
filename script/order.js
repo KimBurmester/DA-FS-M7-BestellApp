@@ -12,7 +12,7 @@ function orderingTheBasket(){
   orderingBtn.insertAdjacentElement('afterend', msg);
   setTimeout(() => {
     msg.remove();
-  }, 5000);
+  }, 2500);
   dishesInit();
   autoResetDeliveryToggle();
 }
@@ -30,5 +30,5 @@ function autoResetDeliveryToggle() {
     if (toggleText) {
       toggleText.textContent = 'Lieferkosten aus';
     }
-  }, 5000);
+  }, 2500);
 }
