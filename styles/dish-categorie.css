@@ -10,15 +10,12 @@
     background-color: rgba(240, 136, 50, 0.3);
     cursor: pointer;
 }
-
-/* 1) Kategorie-Überschriften klickbar machen */
 .dish-categorie-title {
   cursor: pointer;
   position: relative;
   padding-right: 1.5em;
   user-select: none;
 }
-/* Pfeil nach unten */
 .dish-categorie-title::after {
   content: '▾';
   position: absolute;
@@ -27,32 +24,21 @@
   transform: translateY(-50%);
   transition: transform 0.3s ease;
 }
-
-/* 2) Alle Menüs initial ausgeklappt */
-/* #starterMenu,
-#mainMenu,
-#dessertMenu {
-  /* overflow: hidden; */
-  /* max-height: 100vh;
-  transition: max-height 0.4s ease;
-} */
-
 #starterMenu,
 #mainMenu,
 #dessertMenu {
-  display: none;     /* standardmäßig verstecken */
-  margin-bottom: 1rem; /* optional: etwas Abstand nach unten */
+  display: none;
+  margin-bottom: 1rem;
 }
 .dish-categorie-title:not(.collapsed) + #starterMenu,
 .dish-categorie-title:not(.collapsed) + #mainMenu,
 .dish-categorie-title:not(.collapsed) + #dessertMenu {
-  display: block;    /* ganz normal anzeigen – Höhe passt sich dem Inhalt an */
+  display: block;
 }
-
 .dish-categorie-title {
   position: relative;
   cursor: pointer;
-  padding-right: 1.5em;  /* Platz für den Pfeil */
+  padding-right: 1.5em;
   user-select: none;
 }
 .dish-categorie-title::after {
@@ -66,7 +52,6 @@
 .dish-categorie-title.collapsed::after {
   transform: translateY(-50%) rotate(-90deg);
 }
-
 #starterMenu,
 #mainMenu,
 #dessertMenu {
@@ -78,14 +63,3 @@
 .dish-categorie-title:not(.collapsed) + #dessertMenu {
   opacity: 1;
 }
-
-
-/* 3) Wenn .collapsed auf der Überschrift, klappe zu */
-/* .dish-categorie-title.collapsed::after {
-  transform: translateY(-50%) rotate(-90deg);
-}
-.dish-categorie-title.collapsed + #starterMenu,
-.dish-categorie-title.collapsed + #mainMenu,
-.dish-categorie-title.collapsed + #dessertMenu {
-  max-height: 0;
-} */
