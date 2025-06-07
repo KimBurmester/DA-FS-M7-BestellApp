@@ -26,6 +26,28 @@
 }
 }
 
+@media(max-width: 400px){
+  .website-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+}
+
+@media(max-width: 380px){
+  .website-rating{
+  width: 250px;
+  height: 50px;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word;
+  }
+  .dish-picture-header{
+    margin-bottom: 170px;
+  }
+}
+
 /* @media(max-width: 380px){
     .rating-break{
 
