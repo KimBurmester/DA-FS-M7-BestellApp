@@ -32,7 +32,6 @@ function removeFromBasket(i) {
   updateTotals()
 }
 
-
 const deliveryCosts = 5.00;
 
 function calculateSubtotal() {
