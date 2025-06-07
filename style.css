@@ -16,6 +16,7 @@
 @import url(./styles/dish-picture-header.css);
 @import url(./styles/website-title.css);
 @import url(./styles/mobile.css);
+@import url(./styles/basket-information.css);
 
 :root {
   --header-height: 80px;
