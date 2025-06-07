@@ -253,10 +253,6 @@ function renderBasket() {
     .map((d, i) => BasketTemplate(d, i))
     .join('');
   updateTotals();
-
-    setTimeout(() => {
-    basketRef.remove();
-  }, 15000);
   dishesInit();
 }
 function BasketTemplate(d, i) {

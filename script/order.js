@@ -22,9 +22,11 @@ function orderingTheBasket(){
 function autoResetDeliveryToggle() {
   setTimeout(() => {
     const toggle = document.getElementById('deliveryToggle');
+    const basketRef = document.getElementById('dish-basket');
     toggle.checked = false;
     document.getElementById('dish-deliverycosts').innerHTML = '<span>0.00 €</span>';
     document.getElementById('dish-totalprice').innerHTML = '<span>0.00 €</span>';
+    basketRef.innerHTML = '';
 
 
     const toggleText = document.getElementById('toggleText');
