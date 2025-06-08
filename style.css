@@ -1,20 +1,7 @@
 @import url(./styles/basket.css);
-@import url(./styles/dishes.css);
-@import url(./styles/footer.css);
-@import url(./styles/hamburger-menu.css);
-@import url(./styles/header.css);
 @import url(./styles/main.css);
-@import url(./styles/imprint.css);
-@import url(./styles/dish-breaks.css);
-@import url(./styles/dish-categorie.css);
-@import url(./styles/dish-basket.css);
-@import url(./styles/order.css);
-@import url(./styles/dish-picture.css);
-@import url(./styles/dish-mobile.css);
-@import url(./styles/dish-picture-header.css);
-@import url(./styles/website-title.css);
 @import url(./styles/mobile.css);
-@import url(./styles/basket-information.css);
+@import url(./styles/dish.css);
 
 :root {
   --header-height: 80px;
@@ -41,7 +28,11 @@ html, body{
     background-color: rgb(254, 247, 231);
 }
 
-  .footer a{
-    color: white;
-    text-decoration: none;
-  }
+#starterMenu,
+#mainMenu,
+#dessertMenu {
+  display: none;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
